@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "slidereact-client-side-solution",
+    "id": "e20854e2-4be5-4733-a258-d61a600e41db",
+    "version": "1.0.0.15",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": true
+  },
+  "paths": {
+    "zippedPackage": "solution/slidereact.sppkg"
+  }
+}

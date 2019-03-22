@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "90d91cf6-65c5-4a90-81f3-1071d955ad8e",
+  "alias": "SlidereactWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other" },
+    "title": { "default": "slidereact" },
+    "description": { "default": "Sample Slider with Images" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "slidereact"
+    }
+  }]
+}

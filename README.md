@@ -1,6 +1,8 @@
 ## slidereact
 
-This is where you include your WebPart documentation.
+Remember to Install Swiper through npm, use below command
+
+npm install swiper --save
 
 ### Building the code
 

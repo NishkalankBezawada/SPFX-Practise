@@ -4,6 +4,7 @@ Remember to Install Swiper through npm, use below command
 
 npm install swiper --save
 
+Also note that, the images size should be 324X368
 ### Building the code
 
 ```bash

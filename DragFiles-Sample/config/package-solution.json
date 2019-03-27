@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "react-drop-files-solution-client-side-solution",
+    "id": "80c00dfb-6dc4-41fc-b9d1-84c0a33590f3",
+    "version": "1.0.0.11",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/react-drop-files-solution.sppkg"
+  }
+}

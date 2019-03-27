@@ -44,9 +44,8 @@ export default class Slidereact extends React.Component<ISlidereactProps, ISlide
         success: function(resultData) { 
           console.log('Results='+resultData);
           debugger;
-          resultData.d.results.forEach(function(item){  // no need for oldskool for loops
+          resultData.d.results.forEach(function(item){ 
             console.log( item.ID, item.Title, item.Description, item.imageurl.Url );
-            //resultsArr.push() = [item.Title,item.Description,item.imageurl.Url];
             resultsArr.push({
               'title':item.Title,
               'description':item.Description,
@@ -55,7 +54,6 @@ export default class Slidereact extends React.Component<ISlidereactProps, ISlide
          });
          console.log(resultsArr);
           reactHandler.setState({ 
-            //listItems: resultData.d.results 
             listItems:resultsArr
           }); 
           reactHandler.setSwiper();

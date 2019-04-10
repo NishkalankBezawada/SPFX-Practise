@@ -12,7 +12,8 @@ const Swiper: any = require('swiper/dist/js/swiper.min');
 
 export default class Slidereact extends React.Component<ISlidereactProps, ISlidereactswiperstate> {
   private uniqueId: number;
-
+  public lName : string = this.props.listName;
+  //lName = this.props.listName;
   constructor(props: ISlidereactProps) {
     super(props);
     this.state = { listItems: [] };
@@ -38,7 +39,8 @@ export default class Slidereact extends React.Component<ISlidereactProps, ISlide
     let resultsArr : Array<ListItem> = [];
     jquery.ajax({ 
         //url: `https://trialnbezawad.sharepoint.com/sites/Practise/_api/web/lists/getbytitle('ImageSources')/items`,
-        url: `${this.props.siteurl}/_api/web/lists(guid'DBD9D51C-9ABA-4EB9-9AF9-673CD2D32C9E')/items`,
+        //url: `${this.props.siteurl}/_api/web/lists(guid'DBD9D51C-9ABA-4EB9-9AF9-673CD2D32C9E')/items`,
+        url: `${this.props.siteurl}/_api/web/lists/getbytitle('${this.lName}')/items`,
         type: "GET", 
         headers:{'Accept': 'application/json; odata=verbose;'}, 
         success: function(resultData) { 

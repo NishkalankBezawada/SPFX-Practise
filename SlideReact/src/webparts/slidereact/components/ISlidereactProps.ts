@@ -8,5 +8,6 @@ export interface ISlidereactProps {
   swiperOptions: ISlidereactWebPartProps;
   //listService:  IListServce;
   spcontext: WebPartContext;
-  siteurl: string
+  siteurl: string;
+  listName : string
 }

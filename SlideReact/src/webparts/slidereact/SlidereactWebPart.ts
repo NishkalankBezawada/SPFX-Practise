@@ -36,6 +36,7 @@ export interface ISlidereactWebPartProps {
   enableGrabCursor: boolean;
   enableLoop: boolean;
   listItems : string;
+  listName: string;
 }
 
 export default class SlidereactWebPart extends BaseClientSideWebPart<ISlidereactWebPartProps> {
@@ -51,7 +52,8 @@ export default class SlidereactWebPart extends BaseClientSideWebPart<ISlidereact
             swiperOptions: this.properties,
             //listService : response.json,
             spcontext: this.context,
-            siteurl: this.context.pageContext.web.absoluteUrl
+            siteurl: this.context.pageContext.web.absoluteUrl,
+            listName: this.properties.listName
           }
         );
     
@@ -77,57 +79,71 @@ export default class SlidereactWebPart extends BaseClientSideWebPart<ISlidereact
           displayGroupsAsAccordion: true,
           groups: [
             {
-              groupName: strings.GeneralGroupName,
+              groupName: 'General Group Settings',
               groupFields: [
                 PropertyPaneToggle('enableNavigation', {
-                  label: strings.EnableNavigation
+                  //label: 'strings.EnableNavigation'
+                  label: 'Do you want to Enable Navigation?'
                 }),
                 PropertyPaneToggle('enablePagination', {
-                  label: strings.EnablePagination,
+                  //label: strings.EnablePagination,
+                  label: 'Do you want to Enable Pagination?',
                   checked: true
                 }),
                 PropertyPaneTextField('slidesPerView', {
-                  label: strings.SlidesPerWiew,
-                  value: '5'
+                  //label: strings.SlidesPerWiew,
+                  label: 'How many Slides per view ?',
+                  //value: '5'
+                }),
+                PropertyPaneTextField('listName', {
+                  label: 'List Name',
                 })
               ]
             },
             {
-              groupName: strings.AutoplayGroupName,
+              groupName: 'Autoplay Settings',
               groupFields: [
                 PropertyPaneToggle('enableAutoplay', {
-                  label: strings.EnableAutoplay
+                  //label: strings.EnableAutoplay
+                  label: 'Enable AutoPlay?'
                 }),
                 PropertyPaneTextField('delayAutoplay', {
-                  label: strings.DelayAutoplay,
+                  //label: strings.DelayAutoplay,
+                  label: 'Delay Autoplay (In MilliSeconds)',
                   description: strings.Miliseconds,
-                  value: '2500',
+                  //value: '2500',
                   disabled: !this.properties.enableAutoplay
                 }),
                 PropertyPaneToggle('disableAutoplayOnInteraction', {
-                  label: strings.DisableAutoplayOnInteraction,
+                  //label: strings.DisableAutoplayOnInteraction,
+                  label: 'Disable Autoplay On Interaction',
                   disabled: !this.properties.enableAutoplay
                 })
               ],
               isCollapsed: true
             },
             {
-              groupName: strings.AdvancedGroupName,
+              groupName: 'Advanced Group Settings',
               groupFields: [
                 PropertyPaneTextField('slidesPerGroup', {
-                  label: strings.SlidesPerGroup,
-                  value: '5'
+                  //label: strings.SlidesPerGroup,
+                  label: 'Slides Per Group',
+                  //value: '5'
                 }),
                 PropertyPaneTextField('spaceBetweenSlides', {
-                  label: strings.SpaceBetweenSlides,
-                  description: strings.InPixels,
-                  value: '5'
+                  //label: strings.SpaceBetweenSlides,
+                  label: 'Space Between Slides',
+                  description: 'InPixels',
+                  //description: strings.InPixels,
+                  //value: '5'
                 }),
                 PropertyPaneToggle('enableGrabCursor', {
-                  label: strings.EnableGrabCursor
+                  //label: strings.EnableGrabCursor
+                  label: 'Enable Grab Cursor'
                 }),
                 PropertyPaneToggle('enableLoop', {
-                  label: strings.EnableLoop
+                  //label: strings.EnableLoop
+                  label: 'Enable Loop'
                 })
               ],
               isCollapsed: true

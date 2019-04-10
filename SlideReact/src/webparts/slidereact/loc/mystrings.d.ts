@@ -18,6 +18,7 @@ declare interface ISlidereactWebPartStrings {
   InPixels: string;
   EnableGrabCursor: string;
   EnableLoop: string;
+  ListName: string;
 }
 
 declare module 'SlidereactWebPartStrings' {
